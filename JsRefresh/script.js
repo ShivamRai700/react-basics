@@ -134,6 +134,77 @@ CB setTimeout
 
 ⚡ So the key rule: **Synchronous → Microtasks → Macrotasks**.
 
-
-
 */
+
+/*----------------------Higher Order Functions--------------------- */
+
+const radius = [3,4.5,6,7];
+
+/*
+const calculateArea = function (radius) {
+   const output = [];
+   for ( let i = 0; i < radius.length; i++){
+      output.push(Math.trunc(Math.PI * radius[i] * radius[i]));
+   }
+   return output;
+}
+
+// console.log(calculateArea(radius));
+
+const calcCircumference = function (radius) {
+   const output = [];
+   for ( let i = 0; i < radius.length; i++){
+      output.push(Math.trunc(2 * Math.PI * radius[i] ));
+   }
+   return output;
+}
+
+// console.log(calcCircumference(radius))
+
+const calculateDiameter = function (radius) {
+   const output = [];
+   for ( let i = 0; i < radius.length; i++){
+      output.push(2 * radius[i]);
+   }
+   return output;
+}
+*/
+
+// console.log(calculateDiameter(radius))
+
+// Instead of the above code , write reusable and modular code in interview or coding round using functional programming 
+
+const area = function(radius){
+   return Math.PI * radius * radius;
+}
+
+const circumference = function (radius) {
+   return 2 * Math.PI * radius;
+}
+
+// const calculate = function(radius, logic){
+//    const output = [];
+//    for ( let i = 0; i<radius.length; i++){
+//       output.push(logic(radius[i]));
+//    }
+//    return output;
+// }
+
+// console.log(calculate(radius,area));
+// console.log(calculate(radius,circumference));
+
+// map like function 
+
+// Array.prototype.calculate = function(logic) {
+//    const output = [];
+//    for (let i = 0; i < this.length; i++){
+//       output.push(logic(this[i]));
+//    }
+//    return output;
+// }
+
+// console.log(radius.map(area))
+// console.log(radius.calculate(area))
+
+
+//
